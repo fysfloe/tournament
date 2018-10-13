@@ -11,176 +11,178 @@ class ParticipantsTableSeeder extends Seeder
      */
     public function run()
     {
+        $teams = DB::table('teams')->get();
+
         DB::table('participants')->insert([
             [
                 'firstname' => 'Angelina',
                 'surname' => 'Koschel',
-                'team_id' => 1
+                'team_id' => $teams[0]->id
             ],
             [
                 'firstname' => 'Robert',
                 'surname' => 'Rainer',
-                'team_id' => 1
+                'team_id' => $teams[0]->id
             ],
             [
                 'firstname' => 'Sebastian',
                 'surname' => 'Nedoma',
-                'team_id' => 2
+                'team_id' => $teams[1]->id
             ],
             [
                 'firstname' => 'Alexander',
                 'surname' => 'Hellwig',
-                'team_id' => 2
+                'team_id' => $teams[1]->id
             ],
             [
                 'firstname' => 'Patrick',
                 'surname' => 'Ziwna',
-                'team_id' => 3
+                'team_id' => $teams[2]->id
             ],
             [
                 'firstname' => 'Michael',
                 'surname' => 'Willvonseder',
-                'team_id' => 3
+                'team_id' => $teams[2]->id
             ],
             [
                 'firstname' => 'Philipp',
                 'surname' => 'Novomeszky',
-                'team_id' => 4
+                'team_id' => $teams[3]->id
             ],
             [
                 'firstname' => 'Christina',
                 'surname' => 'Edelbacher',
-                'team_id' => 4
+                'team_id' => $teams[3]->id
             ],
             [
                 'firstname' => 'Matthias',
                 'surname' => 'Gallee',
-                'team_id' => 5
+                'team_id' => $teams[4]->id
             ],
             [
                 'firstname' => 'Michael',
                 'surname' => 'Kaindl',
-                'team_id' => 5
+                'team_id' => $teams[4]->id
             ],
             [
                 'firstname' => 'Manuel',
                 'surname' => 'Müller',
-                'team_id' => 6
+                'team_id' => $teams[5]->id
             ],
             [
                 'firstname' => 'Florian',
                 'surname' => 'Jung',
-                'team_id' => 6
+                'team_id' => $teams[5]->id
             ],
             [
                 'firstname' => 'Florian',
                 'surname' => 'Hofinger',
-                'team_id' => 7
+                'team_id' => $teams[6]->id
             ],
             [
                 'firstname' => 'Vanessa',
                 'surname' => 'Rumpf',
-                'team_id' => 7
+                'team_id' => $teams[6]->id
             ],
             [
                 'firstname' => 'Kurtish',
                 'surname' => 'Ipcheski',
-                'team_id' => 8
+                'team_id' => $teams[7]->id
             ],
             [
                 'firstname' => 'Fayez',
                 'surname' => 'Khalil',
-                'team_id' => 8
+                'team_id' => $teams[7]->id
             ],
             [
                 'firstname' => 'Gregor',
                 'surname' => 'Stellnberger',
-                'team_id' => 9
+                'team_id' => $teams[8]->id
             ],
             [
                 'firstname' => 'Mladen',
                 'surname' => 'Vukovic',
-                'team_id' => 9
+                'team_id' => $teams[8]->id
             ],
             [
                 'firstname' => 'Andreas',
                 'surname' => 'Altheimer',
-                'team_id' => 10
+                'team_id' => $teams[9]->id
             ],
             [
                 'firstname' => 'Anastasia',
                 'surname' => 'Koneva',
-                'team_id' => 10
+                'team_id' => $teams[9]->id
             ],
             [
                 'firstname' => 'Lisa',
                 'surname' => 'Baumüller',
-                'team_id' => 11
+                'team_id' => $teams[10]->id
             ],
             [
                 'firstname' => 'Peter',
                 'surname' => 'Nekut',
-                'team_id' => 11
+                'team_id' => $teams[10]->id
             ],
             [
                 'firstname' => 'Lukas',
                 'surname' => 'Struber',
-                'team_id' => 12
+                'team_id' => $teams[11]->id
             ],
             [
                 'firstname' => 'Florian',
                 'surname' => 'Fink',
-                'team_id' => 12
+                'team_id' => $teams[11]->id
             ],
             [
                 'firstname' => 'Marcel',
                 'surname' => 'Mondel',
-                'team_id' => 13
+                'team_id' => $teams[12]->id
             ],
             [
                 'firstname' => 'Tina',
                 'surname' => 'Öhler',
-                'team_id' => 13
+                'team_id' => $teams[12]->id
             ],
             [
                 'firstname' => 'Andreas',
                 'surname' => 'Unterkircher',
-                'team_id' => 14
+                'team_id' => $teams[13]->id
             ],
             [
                 'firstname' => 'Vikram',
                 'surname' => 'Sandhu',
-                'team_id' => 14
+                'team_id' => $teams[13]->id
             ],
             [
                 'firstname' => 'Alexander',
                 'surname' => 'Hochreiter',
-                'team_id' => 15
+                'team_id' => $teams[14]->id
             ],
             [
                 'firstname' => 'Alexander',
                 'surname' => 'Birke',
-                'team_id' => 15
+                'team_id' => $teams[14]->id
             ],
             [
                 'firstname' => 'Jeffrey',
                 'surname' => 'Gabunia',
-                'team_id' => 16
+                'team_id' => $teams[15]->id
             ],
             [
                 'firstname' => 'Samson',
                 'surname' => 'Obasuyi',
-                'team_id' => 16
+                'team_id' => $teams[15]->id
             ],
             [
                 'firstname' => 'Constantin',
                 'surname' => 'Wintoniak',
-                'team_id' => 17
+                'team_id' => $teams[16]->id
             ],
             [
                 'firstname' => 'Dominik',
                 'surname' => 'Hackl',
-                'team_id' => 17
+                'team_id' => $teams[16]->id
             ]
         ]); 
     }
