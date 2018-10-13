@@ -7,16 +7,32 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+import Vue from 'vue'
+import VueRouter from 'vue-router';
+import VuexFlash from 'vuex-flash';
+import VueFlashMessage from 'vue-flash-message';
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+import Navigation from './components/Navigation.vue';
+import Loader from './components/Loader.vue';
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+import { routes } from './routes';
+import store from './vuex/store.js';
 
-const app = new Vue({
-    el: '#app'
+Vue.use(VueRouter);
+Vue.use(VueFlashMessage);
+
+const router = new VueRouter({
+    mode: 'history',
+    routes
+});
+
+Vue.component('Loader', Loader);
+
+new Vue({
+    el: '#app',
+    components: { 
+        Navigation 
+    },
+    router,
+    store: store
 });
