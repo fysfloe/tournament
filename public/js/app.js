@@ -52113,7 +52113,13 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
     })),
     watch: {
         id: function id(newId, oldId) {
-            this.$store.dispatch('groups/show', newId);
+            var _this2 = this;
+
+            this.isLoading = true;
+
+            this.$store.dispatch('groups/show', newId).then(function () {
+                return _this2.isLoading = false;
+            });
         }
     }
 });

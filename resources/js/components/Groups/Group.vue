@@ -49,7 +49,10 @@
         },
         watch: {
             id (newId, oldId) {
-                this.$store.dispatch('groups/show', newId);
+                this.isLoading = true;
+
+                this.$store.dispatch('groups/show', newId)
+                    .then(() => this.isLoading = false);
             }
         }
     }
